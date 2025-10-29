@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import authRoutes from './authRoutes.js';
+import participantRoutes from './participantRoutes.js';
+import attendanceRoutes from './attendanceRoutes.js';
+import outboundRoutes from './outboundRoutes.js';
+import qrRoutes from './qrRoutes.js';
+const api = Router();
+api.use('/auth', authRoutes);
+api.use('/participants', participantRoutes);
+api.use('/attendance', attendanceRoutes);
+api.use('/outbound', outboundRoutes);
+api.use('/qr', qrRoutes);
+export default api;
