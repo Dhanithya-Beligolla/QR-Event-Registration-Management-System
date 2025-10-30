@@ -8,6 +8,10 @@ import { connectDB } from './config/db.js';
 import api from './routes/index.js';
 import { logger } from './utils/logger.js';
 import { authService } from './services/authService.js';
+// Prefer IPv4 to avoid DNS/IPv6 issues with Atlas
+import { setDefaultResultOrder } from 'node:dns';
+setDefaultResultOrder('ipv4first');
+// ...existing code...
 
 dotenv.config();
 
