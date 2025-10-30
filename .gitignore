@@ -1,0 +1,15 @@
+# Node modules
+/node_modules/
+**/node_modules/
+
+# Environment files (keep .env.example)
+.env
+.env.*
+
+
+# macOS Finder
+.DS_Store
+**/.DS_Store
+
+# Ignore everything in .github (workflows, configs)
+.github/
